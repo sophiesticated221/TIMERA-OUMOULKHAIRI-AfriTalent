@@ -12,10 +12,10 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand fixed-top" aria-label="main-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="main-navbar">
             <div class="container">
                 <img src="images/AfriTalent.png" alt="AfriTalent" height="70">
-                <button class="navbar-toggler d-none shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
              <div class="collapse navbar-collapse" id="navbarContent">
@@ -52,6 +52,8 @@
     <main>
         <section class="hero-section container">
             <div class="container">
+                <div class="row align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
              
                 <h1>Propulsez votre talent <span>au-delà des frontières</span></h1>
                 <p>Connectez-vous avec les meilleurs développeurs, designers et experts data d'Afrique pour propulser vos projets vers le succès </p>
@@ -73,51 +75,53 @@
                         <p>Missions Réalisées</p>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/imageacceuil.avif" alt="imageacceuil">
-                </div>
-                  
+              </div>  
+              <div class="col-lg-6 hero-image-container">
+                <div class="hero-image"></div>
+                    <img src="images/imageacceuil.avif" alt="imageacceuil" class="rounded-4 shadow-lg position-relative" style="z-index: 1;">
+              </div>
+             </div> 
             </div>
         </section>
         <section class="section-padding bg-light-custom fade-in">
             <div class="container">
-
-                <h2>Comment ça marche ?</h2>
-             <div class="bento-grid">
-                <!-- Carte 1 -->
-                <div class="bento-item bento-item-1">
-                    <div class="bento-icon">
-                        <i class="bi bi-person-circle"></i>         
-                    </div>
-                    <h3>1. Inscription</h3>
-                    <p class="texted-muted mt-3">Créer votre compte en quelques minutes.</p>
+                <div class="text-center mb-5">
+                    <h2>Comment ça marche ?</h2>
                 </div>
-                <!-- Carte 2 -->
-                <div class="bento-item bento-item-2">
-                    <div class="bento-icon">
-                        <i class="bi bi-search"></i>
+                <div class="bento-grid">
+                    <!-- Carte 1 -->
+                    <div class="bento-item bento-item-1">
+                        <div class="bento-icon">
+                            <i class="bi bi-person-circle"></i>         
+                        </div>
+                        <h3>1. Inscription</h3>
+                        <p class="texted-muted mt-3">Créer votre compte en quelques minutes.</p>
                     </div>
-                    <h3>2. Explorez les profils</h3>
-                    <p class="text-muted mt-3">Parcourez notre catalogue de freelances vérifiés, filtrez par compétences, tarifs et avis pour trouver la perle rare adaptée à vos besoins spécifiques.</p>
-                </div>
-                <!-- Carte 3 -->
-                <div class="bento-item bento-item-3">
-                    <div class="bento-icon">
-                        <i class="bi bi-rocket-takeoff"></i>
+                    <!-- Carte 2 -->
+                    <div class="bento-item bento-item-2">
+                        <div class="bento-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h3>2. Explorez les profils</h3>
+                        <p class="text-muted mt-3">Parcourez notre catalogue de freelances vérifiés, filtrez par compétences, tarifs et avis pour trouver la perle rare adaptée à vos besoins spécifiques.</p>
                     </div>
-                    <h3>3. Démarrez la mission</h3>
-                    <p class="text-muted mt-3">Collaborez efficacement via nos outils intégrés.</p>
-                </div>
-                <!-- Carte 4 -->
-                <div class="bento-item bento-item-4">
-                    <div class="bento-icon">
-                        <i class="bi bi-shield-check"></i>
+                    <!-- Carte 3 -->
+                    <div class="bento-item bento-item-3">
+                        <div class="bento-icon">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </div>
+                        <h3>3. Démarrez la mission</h3>
+                        <p class="text-muted mt-3">Collaborez efficacement via nos outils intégrés.</p>
                     </div>
-                    <h3>4. Paiement Sécurisé</h3>
-                    <p class="text-muted mt-3">Validation de la livraison et paiement 100% garanti.</p>
-                </div>
-
-             </div>
+                    <!-- Carte 4 -->
+                    <div class="bento-item bento-item-4">
+                        <div class="bento-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3>4. Paiement Sécurisé</h3>
+                        <p class="text-muted mt-3">Validation de la livraison et paiement 100% garanti.</p>
+                    </div>
+                </div>    
             </div> 
         </section>
         <section class="section-padding fade-in">
@@ -129,76 +133,91 @@
                     </div>
                     <a href="freelances.html" class="btn-custom btn-outline-custom d-none d-md-flex">Voir tout<i class="bi bi-arrow-right"></i></a>
                 </div>
+                <div class="row g-4">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h4>Développement Web</h4>
+                            <p class="text-muted mb-0">+600 freelances</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">    
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-code-palette"></i>
+                            </div>
+                            <h4>Design UI/UX</h4>
+                            <p class="text-muted mb-0">Conception d'interfaces modernes et intuitives </p>
+                            <p class="text-muted mb-0">+300 freelances disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-code-megaphone"></i>
+                            </div>
+                            <h4>Marketing Digital</h4>
+                            <p class="texted-muted mb-0">Stratégies de communication et publicité en ligne.</p>
+                            <p class="text-muted mb-0">+700 freelances disponibles</p>   
+                        </div>
+                    </div>    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-code-database"></i>
+                            </div>
+                            <h3>Data & IA</h3>
+                            <p class="texted-muted mb-0">Analyse de données et intelligence artificielle.</p>
+                            <p class="texted-muted mb-0">+200 freelances disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-pencil-square"></i>
+                            </div>
+                            <h3>Rédaction Tech</h3>
+                            <p class="text-muted mb-0">Rédaction de contenus techniques et spécialisés.</p>
+                            <p class="texted-muted mb-0">+250 freelances disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                            </div>
+                            <h3>DevOps & Cloud</h3>
+                            <p class="texted-muted mb-0">Gestion d'infrastructures et déploiement cloud.</p>
+                            <p class="texted-muted mb-0">+250 freelances disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                            <h3>CyberSécurité & Pentesting</h3>
+                            <p class="text-muted mb-0">Audit de sécurité, tests d'intrusion et protection dse systèmes.</p>
+                            <p class="texted-muted mb-0">+200 freelances disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="category-card">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-cpu-fill"></i>
+                            </div>
+                            <h3>Ingenieur IoT</h3>
+                            <p class="texted-muted mb-0">Conception, Deploiement de systèmes connectés intelligents</p>
+                            <p class="texted-muted mb-0">+180 freelances disponibles</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="text-center mt-4 d-md-none">
+                    <a href="freelances.html" class="btn-custom btn-outline-custom">Voir tout <i class="bi bi-arrow-right"></i></a>
+                </div>   
             </div>
-            
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-code-slash"></i>
-                </div>
-                    <h4>Développement Web</h4>
-                    <p class="text-muted mb-0">+600 freelances</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-code-palette"></i>
-                </div>
-                    <h4>Design UI/UX</h4>
-                    <p class="text-muted mb-0">Conception d'interfaces modernes et intuitives </p>
-                    <p class="text-muted mb-0">+300 freelances disponibles</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-code-megaphone"></i>
-                </div>
-                <h4>Marketing Digital</h4>
-                <p class="texted-muted mb-0">Stratégies de communication et publicité en ligne.</p>
-                <p class="text-muted mb-0">+700 freelances disponibles</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-code-database"></i>
-                </div>
-                <h3>Data & IA</h3>
-                <p class="texted-muted mb-0">Analyse de données et intelligence artificielle.</p>
-                <p class="texted-muted mb-0">+200 freelances disponibles</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-pencil-square"></i>
-                </div>
-                <h3>Rédaction Tech</h3>
-                <p class="text-muted mb-0">Rédaction de contenus techniques et spécialisés.</p>
-                <p class="texted-muted mb-0">+250 freelances disponibles</p>
-            </article>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-cloud-arrow-up"></i>
-                </div>
-                <h3>DevOps & Cloud</h3>
-                <p class="texted-muted mb-0">Gestion d'infrastructures et déploiement cloud.</p>
-                <p class="texted-muted mb-0">+250 freelances disponibles</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-shield-lock"></i>
-                </div>
-                <h3>CyberSécurité & Pentesting</h3>
-                <p class="text-muted mb-0">Audit de sécurité, tests d'intrusion et protection dse systèmes.</p>
-                <p class="texted-muted mb-0">+200 freelances disponibles</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper">
-                    <i class="bi bi-cpu-fill"></i>
-                </div>
-                <h3>Ingenieur IoT</h3>
-                <p class="texted-muted mb-0">Conception, Deploiement de systèmes connectés intelligents</p>
-                <p class="texted-muted mb-0">+180 freelances disponibles</p>
-            </div>
-            <div class="text-center mt-4 d-md-none">
-                <a href="freelances.html" class="btn-custom btn-outline-custom">Voir tout <i class="bi bi-arrow-right"></i></a>
-            </div>
-
-            
         </section>
         <section class="section-padding bg-light-custom fade-in">
             <div class="container">
@@ -208,66 +227,89 @@
                 <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner pb-5">
                         <!-- Témoignage1 -->
-                        <div class="carousel-item active text-center">
-                            <img src="images/temoin1.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div>
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin1.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">Grâce à AfriTalent,j'ai trouvé plusieurs clients internationaux et développé mon activité"</p>
+                                    <h4>Aissatou</h4>
+                                    <p class="text-muted small">Développeuse Fullstack</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">Grâce à AfriTalent,j'ai trouvé plusieurs clients internationaux et développé mon activité"</p>
-                            <h4>Aissatou</h4>
-                            <p class="text-muted small">Développeuse Fullstack</p>
-                        </div>
+                        </div>    
                         <!-- Témoignage2 -->
-                        <div class="carousel-item text-center" >
-                            <img src="images/temoin2.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin2.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">"Nous avions besoin d'un expert UX pour repenser notre application. En 48h, nous avons contractualisé avec un profil exceptionnel sur AfriTalent. Le résultat dépasse nos attentes"</p> 
+                                    <h4>Marc Levian</h4>
+                                    <p class="text-muted small">CTO,TechCorp</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">"Nous avions besoin d'un expert UX pour repenser notre application. En 48h, nous avons contractualisé avec un profil exceptionnel sur AfriTalent. Le résultat dépasse nos attentes"</p> 
-                            <h4>Marc Levian</h4>
-                            <p class="text-muted small">CTO,TechCorp</p>
                         </div>
                         <!-- Témoignage3 -->
                         <div class="carousel-item text-center">
-                            <img src="images/temoin3.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin3.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">"La meilleure plateforme pour les talents africains. Les outils de gestion de projet intégrés me font gagner un temps précieux au quotidien"</p> 
+                                    <h4>Issiakha Ba</h4>
+                                    <p class="text-muted small">Data Scientist</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">"La meilleure plateforme pour les talents africains. Les outils de gestion de projet intégrés me font gagner un temps précieux au quotidien"</p> 
-                            <h4>Issiakha Ba</h4>
-                            <p class="text-muted small">Data Scientist</p>
                         </div>
                         <!-- Témoignage4 -->
                         <div class="carousel-item text-center" >
-                            <img src="images/temoin4.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin4.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">"Le processus est fluide et très bien organisé"</p> 
+                                    <h4>Isac Fayçal</h4>
+                                    <p class="text-muted small">CTO,AfriWeb</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">"Le processus est fluide et très bien organisé"</p> 
-                            <h4>Isac Fayçal</h4>
-                            <p class="text-muted small">CTO,AfriWeb</p>
                         </div>
                         <!-- Témoignage5 -->
-                        <div class="carousel-item text-center" >
-                            <img src="images/temoin5.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin5.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">"Une opportunité incroyable pour les freelances africains"</p> 
+                                    <h4>Dolores Shalom</h4>
+                                    <p class="text-muted small">Freelance Marketing Digital</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">"Une opportunité incroyable pour les freelances africains"</p> 
-                            <h4>Dolores Shalom</h4>
-                            <p class="text-muted small">Freelance Marketing Digital</p>
                         </div>
                         <!-- Témoignage6 -->
-                         <div class="carousel-item text-center" >
-                            <img src="images/temoin6.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
-                            <div class="mb-3 text-warning">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        <div class="carousel-item text-center" >
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <img src="images/temoin6.jpg" alt="temoignage" class="rounded-circle mb-3 border border-3 border-primary" >
+                                    <div class="mb-3 text-warning">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="lead font-italic mb-4">"J'ai trouvé un ingenieur Iot en moins 48h sachant qu'ils ne sont pas facile d'accès"</p> 
+                                    <h4>Henry Sambou</h4>
+                                    <p class="text-muted small">CTO,GlobalVison</p>
+                                </div>
                             </div>
-                            <p class="lead font-italic mb-4">"J'ai trouvé un ingenieur Iot en moins 48h sachant qu'ils ne sont pas facile d'accès"</p> 
-                            <h4>Henry Sambou</h4>
-                            <p class="text-muted small">CTO,GlobalVison</p>
                         </div>
-
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
@@ -293,44 +335,53 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="mb-4">
-                <a href="index.html" class="navbar-brand text-white fs-3 font-heading fw-bold">
-                </a>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="navbar-brand text-white fs-3 font-heading fw-bold">
+                            <i class="bi bi-layers-fill text-primary"></i> AfriTalent
+                        </a>
+                    </div>
+                    <p class="mb-4 opacity-75">La meilleure platforme de mise en relation entre freelance tech africains et entreprises du monde entier</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Liens utiles</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="freelances.html">Freelances</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="about.html">Notre Histoire</a></li>
+                    </ul>
+                </div>
+                 <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Ressources</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Guides pour freelances</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'Aide</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">CGU & Confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Contact</h6>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-center mb-2"><i class="bi bi-envelope text-primary me-2"></i> unegalsena@gmail.com</li>
+                        <li class="d-flex align-items-center mb-2"><i class="bi bi-telephone text-primary me-2"></i> +221 70843 35 71</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-geo-alt text-primary me-2"></i> Dakar, Sénégal</li>
+                    </ul>
+                </div>
             </div>
-            <p>La meilleure platforme de mise en relation entre freelance tech africains et entreprises du monde entier</p>
+            <div class="footer-bottom">
+                <p class="mb-0">© 2026 AfriTalent - Tous droits réservés</p>
+            </div>
         </div>
-        <div>
-            <h6 class="footer-heading">Liens utiles</h6>
-            <ul class="footer-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="freelances.html">Freelances</a></li>
-                <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="about.html">Notre Histoire</a></li>
-            </ul>
-        </div>
-            <h6 class="footer-heading">Ressources</h6>
-            <ul>
-                <li><a href="#">Guides pour freelances</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Centre d'Aide</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">CGU & Confidentialité</a></li>
-            </ul>
-        </div>
-        <div>
-            <h6 class="footer-heading">Contact</h6>
-            <ul class="footer-links">
-                <li class="d-flex align-items-center mb-2"><i class="bi bi-envelope text-primary me-2"></i> unegalsena@gmail.com</li>
-                <li class="d-flex align-items-center mb-2"><i class="bi bi-telephone text-primary me-2"></i> +221 70843 35 71</li>
-                <li class="d-flex align-items-center"><i class="bi bi-geo-alt text-primary me-2"></i> Dakar, Sénégal</li>
-            </ul>
-
-        </div>
-        <div class="footer-bottom">
-            <p class="mb-0">© 2026 AfriTalent - Tous droits réservés</p>
-        </div>
-
-     </div>
     </footer>
     <!-- Pour retourner en haut -->
     <button id="back-to-top" aria-label="Retour en haut">

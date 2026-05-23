@@ -12,10 +12,10 @@
 </head >
 <body>
     <header>
-        <nav class="navbar navbar-expand fixed-top" aria-label="main-navbar">
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="main-navbar">
             <div class="container">
                 <img src="images/AfriTalent.png" alt="AfriTalent" height="70">
-                <button class="navbar-toggler d-none shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
              <div class="collapse navbar-collapse" id="navbarContent">
@@ -51,11 +51,10 @@
     </header>
     <main style="padding-top: 100px;">
     <section class="section-padding bg-light-custom fade-in">
-      <div class="container text-center">
-        <h2>Choisir une catégorie :</h2>
-        <p class="lead text-muted max-w-600 mx-auto">Parcourez notre sélection des meilleurs talents tech d'Afrique, prêts à rejoindre votre équipe</p>
-      </div>
-    </section>  
+        <div class="container text-center">
+            <h2>Choisir une catégorie :</h2>
+            <p class="lead text-muted max-w-600 mx-auto">Parcourez notre sélection des meilleurs talents tech d'Afrique, prêts à rejoindre votre équipe</p>
+        </div>  
             <!-- CATALOGUE FREELANCES -->
         <section class="section-padding fade-in">
             <div class="container">
@@ -71,29 +70,29 @@
                     <button class="filter-btn" data-filter="devops">Ingenieur IoT</button>
                 </div>
                 <!-- Grille -->
-                 <div id="freelance-grid">
+                <div id="freelance-grid" class="row g-4">
                     <!-- Profil 1 -->
-                 <div data-category="Développement Web">
-                    <div class="card freelance-card h-100">
-                        <span class="card-badge">Disponible</span>
-                            <img src="images/mombaye.avif" alt="mombaye">
-                            <div class="card-body p-4">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="card-title fw-bold mb-0">Mouhamed Mbaye</h5>
-                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.9</div>
+                    <div data-category="Développement Web" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <span class="card-badge">Disponible</span>
+                                <img src="images/mombaye.avif" alt="mombaye">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h5 class="card-title fw-bold mb-0">Mouhamed Mbaye</h5>
+                                        <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.9</div>
+                                    </div>
+                                    <h6 class="text-primary mb-3">Développeur React/Vue</h6>
+                                    <p class="card-text text-muted small mb-4">Expert en création d'interfaces fluides et responsives. 5 ans d'expérience avec des startups européennes.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold fs-5">5000f<span class="text-muted fs-6 fw-normal">/h</span></span>
+                                        <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
+                                    </div>
                                 </div>
-                                <h6 class="text-primary mb-3">Développeur React/Vue</h6>
-                                <p class="card-text text-muted small mb-4">Expert en création d'interfaces fluides et responsives. 5 ans d'expérience avec des startups européennes.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="fw-bold fs-5">5000f<span class="text-muted fs-6 fw-normal">/h</span></span>
-                                    <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
-                                </div>
-                            </div>
+                        </div>
                     </div>
-                 </div>
                  <!-- Profil 2 -->
-                <div data-category="CyberSécurité">
-                    <div class="card freelance-card h-100">
+                    <div data-category="CyberSécurité" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
                             <img src="images/sidy.avif" alt="sidydiop">
                             <div class="card-body p-4">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
@@ -107,17 +106,17 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 3 -->
-                <div data-category="Designer UI/UX">
-                    <div class="card freelance-card h-100">
-                        <span class="card-badge bg-success">Top Rated</span>
-                        <img src="images/franck.avif" alt="franck">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Franck Mavoungou</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
+                 <!-- Profil 3 -->
+                    <div data-category="Designer UI/UX" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <span class="card-badge bg-success">Top Rated</span>
+                            <img src="images/franck.avif" alt="franck">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Franck Mavoungou</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Designer UI/UX</h6>
                                 <p class="card-text text-muted small mb-4">Design centré sur l'utilisateur. Maîtrise avancée de Figma et création de Design Systems complets.</</p>
@@ -126,16 +125,16 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 4 -->
-                <div data-category="Data & IA">
-                    <div class="card freelance-card h-100">
-                        <img src="images/ibrahima.avif" alt="ibrahima">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Ibrahima Fall</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
+                 <!-- Profil 4 -->
+                    <div data-category="Data & IA" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <img src="images/ibrahima.avif" alt="ibrahima">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Ibrahima Fall</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Spécialiste DATA & IA</h6>
                                 <p class="card-text text-muted small mb-4">Analyse des données et modèles d'intelligence artificielle</p>
@@ -144,16 +143,16 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 5 -->
-                <div data-category="Marketing Digital">
-                    <div class="card freelance-card h-100">
-                        <img src="images/safietou.jpg" alt="safietou">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Safietou Ba</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.7</div>
+                 <!-- Profil 5 -->
+                    <div data-category="Marketing Digital" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <img src="images/safietou.jpg" alt="safietou">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Safietou Ba</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.7</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Marketing Digital</h6>
                                 <p class="card-text text-muted small mb-4">Gestion des campagnes publicitaires et réseaux sociaux</p>
@@ -162,16 +161,16 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 6 -->
-                <div data-category="DevOps & Cloud">
-                    <div class="card freelance-card h-100">
-                        <img src="images/grace.jpg" alt="grace">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Grace M'bon</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.6</div>
+                 <!-- Profil 6 -->
+                    <div data-category="DevOps & Cloud" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <img src="images/grace.jpg" alt="grace">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Grace M'bon</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.6</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Ingenieur DevOps & Cloud</h6>
                                 <p class="card-text text-muted small mb-4">Automatisation des déploiements et gestion d'infrastructures cloud sécurisées</p>
@@ -180,17 +179,17 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 7 -->
-                <div data-category="Ingenieur IoT">
-                    <div class="card freelance-card h-100">
-                        <span class="card-badge">Disponible</span>
-                        <img src="images/ariel.jpg" alt="ariel">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Ariel Dazogbo</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
+                 <!-- Profil 7 -->
+                    <div data-category="Ingenieur IoT" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <span class="card-badge">Disponible</span>
+                            <img src="images/ariel.jpg" alt="ariel">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Ariel Dazogbo</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.8</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Ingenieur IoT & Systèmes Embarqués</h6>
                                 <p class="card-text text-muted small mb-4">Développement de solutions connectées et systèmes intelligents</p>
@@ -199,16 +198,16 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 8 -->
-                <div data-category="CyberSécurité">
-                    <div class="card freelance-card h-100">
-                        <img src="images/ilyes.jpg" alt="ilyes">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Ilyès BenAchraf</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.7</div>
+                 <!-- Profil 8 -->
+                    <div data-category="CyberSécurité" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <img src="images/ilyes.jpg" alt="ilyes">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Ilyès BenAchraf</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.7</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Pentesteur</h6>
                                 <p class="card-text text-muted small mb-4">Analyse des vulnérabilités et sécurisations des systèmes informatiques et applications web</p>
@@ -217,16 +216,16 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Profil 9 -->
-                <div data-category="Développement Web">
-                    <div class="card freelance-card h-100">
-                        <img src="images/robert.jpg" alt="robert">
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-2">
-                                <h5 class="card-title fw-bold mb-0">Robert Diassé</h5>
-                                <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.9</div>
+                 <!-- Profil 9 -->
+                    <div data-category="Développement Web" class="col-lg-4 col-md-6 freelance-item">
+                        <div class="card freelance-card h-100">
+                            <img src="images/robert.jpg" alt="robert">
+                            <div class="card-body p-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title fw-bold mb-0">Robert Diassé</h5>
+                                    <div class="text-warning small"><i class="bi bi-star-fill"></i> 4.9</div>
                                 </div>
                                 <h6 class="text-primary mb-3">Développeur Fullstack</h6>
                                 <p class="card-text text-muted small mb-4">Création d'applications web modernes et securisées</p>
@@ -235,62 +234,68 @@
                                     <a href="#" class="btn-custom btn-outline-custom py-1 px-3 fs-6">Voir le profil</a>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </section>
-        </main>
-    </section>
+    </main>
     <footer class="footer">
-     <div class="container">
-            <div class="mb-4">
-                <a href="index.html" class="navbar-brand text-white fs-3 font-heading fw-bold">
-                    <i class="bi bi-layers-fill text-primary"></i> AfriTalent
-                </a>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="navbar-brand text-white fs-3 font-heading fw-bold">
+                            <i class="bi bi-layers-fill text-primary"></i> AfriTalent
+                        </a>
+                    </div>
+                    <p class="mb-4 opacity-75">La meilleure platforme de mise en relation entre freelance tech africains et entreprises du monde entier</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Liens utiles</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="freelances.html">Freelances</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="about.html">Notre Histoire</a></li>
+                    </ul>
+                </div>
+                 <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Ressources</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Guides pour freelances</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'Aide</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">CGU & Confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Contact</h6>
+                    <ul class="footer-links">
+                        <li class="d-flex align-items-center mb-2"><i class="bi bi-envelope text-primary me-2"></i> unegalsena@gmail.com</li>
+                        <li class="d-flex align-items-center mb-2"><i class="bi bi-telephone text-primary me-2"></i> +221 70843 35 71</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-geo-alt text-primary me-2"></i> Dakar, Sénégal</li>
+                    </ul>
+                </div>
             </div>
-            <p>La meilleure platforme de mise en relation entre freelance tech africains et entreprises du monde entier</p>
+            <div class="footer-bottom">
+                <p class="mb-0">© 2026 AfriTalent - Tous droits réservés</p>
+            </div>
         </div>
-        <div>
-            <h6 class="footer-heading">Liens utiles</h6>
-            <ul class="footer-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="freelances.html">Freelances</a></li>
-                <li><a href="tarifs.html">Tarifs</a></li>
-                <li><a href="about.html">Notre Histoire</a></li>
-            </ul>
-        </div>
-            <h6 class="footer-heading">Ressources</h6>
-            <ul>
-                <li><a href="#">Guides pour freelances</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Centre d'Aide</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">CGU & Confidentialité</a></li>
-            </ul>
-        </div>
-        <div>
-            <h6 class="footer-heading">Contact</h6>
-            <ul class="footer-links">
-                <li class="d-flex align-items-center mb-2"><i class="bi bi-envelope text-primary me-2"></i> unegalsena@gmail.com</li>
-                <li class="d-flex align-items-center mb-2"><i class="bi bi-telephone text-primary me-2"></i> +221 70 843 35 71</li>
-                <li class="d-flex align-items-center"><i class="bi bi-geo-alt text-primary me-2"></i> Dakar, Sénégal</li>
-            </ul>
-
-        </div>
-        <div class="footer-bottom">
-            <p class="mb-0">© 2026 AfriTalent - Tous droits réservés</p>
-        </div>
-
-     </div>
     </footer>
     <!-- Pour retourner en haut -->
     <button id="back-to-top" aria-label="Retour en haut">
         <i class="bi bi-arrow-up"></i>
     </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-
-    
 </body>
 </html>
