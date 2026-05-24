@@ -72,6 +72,11 @@ a:hover {
   font-size: 1.5rem;
   color: var(--primary);
 }
+.navbar-brand img {
+  background-color: var(--secondary);
+  padding: 8px 12px;
+  border-radius: 12px;
+}
 .navbar .nav-link {
   font-weight: 500;
   color: var(--text-main);
@@ -93,6 +98,7 @@ font-size: 1.2rem;
 cursor: pointer;
 transition: var(--transition);
 margin-left: 1rem;
+margin-right: 1rem;
 }
 #theme-toggle:hover {
 color: var(--primary);
@@ -464,7 +470,63 @@ margin-bottom: 1.5rem;
   .hero-stats { gap: 1rem; }
   .stat-item h3 { font-size: 1.5rem; }
 }
+  /* Mode Sombre */
 
+/* Active le mode sombre sur toute la page */
+.dark-mode {
+    background-color: #020617; 
+    color: #f8fafc; 
+}
+/* Navbar en mode sombre */
+.dark-mode .navbar {
+    background: rgba(15, 23, 42, 0.95); /* rgba permet une légère transparence */
+}
+/* Change le fond des cartes en mode sombre */
+.dark-mode .bento-item,
+.dark-mode .category-card,
+.dark-mode .pricing-card,
+.dark-mode .freelance-card {
+    background-color: #1e293b; /* Fond sombre pour les cartes */
+    color: #f8fafc; 
+}
+/* Couleur des textes secondaires en dark mode */
+.dark-mode .hero-subtitle,
+.dark-mode .stat-item p,
+.dark-mode .navbar .nav-link {
+    color: #cbd5e1;
+}
+/* Titres en blanc en mode sombre */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: white;
+}
+  /* Bouton de retour en haut */
+
+#backToTop {
+    position: fixed; /* fixe le bouton même quand on scroll */
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;/* Supprime la bordure par défaut */
+    border-radius: 50%; /* Rend le bouton circulaire */
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer; /* Change le curseur en main au survol */
+    opacity: 0; /* Rend le bouton invisible */
+    visibility: hidden; /* Cache complètement l’élément */
+    transition: var(--transition); /* Animation fluide lors de l’apparition */
+    z-index: 999; /* Place le bouton au-dessus des autres éléments */
+}
+/* Classe ajoutée en JS quand on scroll */
+#backToTop.show {
+    opacity: 1;/* Rend le bouton visible progressivement */
+    visibility: visible; /* Réaffiche l’élément */
+}
 
 
 
