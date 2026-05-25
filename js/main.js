@@ -14,7 +14,7 @@ if (localStorage.getItem("theme") === "dark") {
 // Écoute le clic sur le bouton dark mode
 themeToggle.addEventListener("click", () => {
 
-    // Ajoute ou retire automatiquement la classe dark-mode
+    // Ajoute ou retire automagittiquement la classe dark-mode
     document.body.classList.toggle("dark-mode");
 
     // Vérifie si le body possède actuellement la classe dark-mode
@@ -77,4 +77,96 @@ backToTop.addEventListener("click", () => {
         top: 0,
         behavior: "smooth"
     });
+});
+// Sélection des compteurs
+
+// On récupère tous les éléments ayant la classe "counter"
+const counters = document.querySelectorAll('.counter');
+
+// INTERSECTION OBSERVER POUR LES COMPTEURS
+
+// IntersectionObserver permet de détecter
+// quand un élément entre dans l'écran
+const counterObserver = new IntersectionObserver(
+
+  // "entries" contient les éléments observés; "observer" représente l'observer lui-même
+  (entries, observer) => {
+
+    // On parcourt chaque élément détecté
+    entries.forEach(entry => {
+
+      // Vérifie si l'élément est visible à l'écran
+      if (entry.isIntersecting) {
+
+        // Élément actuellement visible
+        const counter = entry.target;
+        // Récupère la valeur finale depuis data-target
+        const target = +counter.getAttribute('data-target'); // Le "+" transforme le texte en nombre
+
+        // Valeur de départ du compteur
+        let count = 0;
+
+        // Fonction qui anime le compteur
+        const updateCounter = () => {
+          // Vitesse de l'incrémentation
+          const increment = target / 100;
+          // Tant qu'on n'a pas atteint la valeur finale
+          if (count < target) {
+            
+            count += increment; // on augmente progressivement
+            counter.textContent = Math.ceil(count); //affichage
+
+            requestAnimationFrame(updateCounter); // Redemande une nouvelle animation fluide
+          } else {
+
+            
+            counter.textContent = target; // affiche exactement la valeur finale
+          }
+        };
+        
+        updateCounter(); // Lance l'animation
+        
+        observer.unobserve(counter); // Arrête d'observer cet élément pour éviter que l'animation recommence
+      }
+    });
+  },
+  {
+    
+    threshold: 0.5 // L'animation démarre quand 50% de l'élément est visible
+  }
+);
+// On commence à observer chaque section
+
+counters.forEach(counter => {
+  // L'observer surveille chaque compteur
+  counterObserver.observe(counter);
+});
+// Animation fade in des sections
+
+// On récupère toutes les sections ayant la classe fade-section
+const fadeSections = document.querySelectorAll('.fade-in');
+// Création de l'observer
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    // Parcourt toutes les sections observées
+    entries.forEach(entry => {
+      // Vérifie si la section est visible
+      if (entry.isIntersecting) {
+        // Ajoute la classe "visible"
+        // ce qui déclenche l'animation CSS
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  // Options
+  {
+    // Déclenche quand 20% de la section est visible
+    threshold: 0.2
+  }
+);
+
+// Observations des sections
+fadeSections.forEach(section => {
+  // L'observer surveille chaque section
+  fadeObserver.observe(section);
 });

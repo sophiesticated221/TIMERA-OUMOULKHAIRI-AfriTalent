@@ -527,6 +527,18 @@ margin-bottom: 1.5rem;
     opacity: 1;/* Rend le bouton visible progressivement */
     visibility: visible; /* Réaffiche l’élément */
 }
+/* Fade-in animation */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
