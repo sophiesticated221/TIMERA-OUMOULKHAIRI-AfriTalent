@@ -170,3 +170,132 @@ fadeSections.forEach(section => {
   // L'observer surveille chaque section
   fadeObserver.observe(section);
 });
+
+// FILTRAGE DYNAMIQUE DES FREELANCES
+
+// Sélectionne tous les boutons de filtre
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+// Sélectionne tous les éléments freelances
+const freelanceItems = document.querySelectorAll('.freelance-item');
+
+// Parcourt chaque bouton
+filterButtons.forEach(button => {
+
+    // Détecte le clic sur un bouton
+    button.addEventListener('click', () => {
+
+        // Retire la classe active de tous les boutons
+        filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Ajoute active au bouton cliqué
+        button.classList.add('active');
+
+        // Récupère la catégorie du bouton
+        const filter = button.getAttribute('data-filter');
+
+        // Parcourt tous les freelances
+        freelanceItems.forEach(item => {
+
+            // Récupère la catégorie de l'élément
+            const category = item.getAttribute('data-category');
+
+            // Vérifie si on doit afficher l'élément
+            if (filter === 'all' || filter === category) {
+
+                // Affiche l'élément
+                item.style.display = 'block';
+
+            } else {
+
+                // Cache l'élément
+                item.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+// VALIDATION DU FORMULAIRE DE CONTACT
+
+// Sélectionne le formulaire
+const contactForm = document.getElementById('contactForm');
+
+// Vérifie si le formulaire existe
+if (contactForm) {
+
+    // Détecte la soumission du formulaire
+    contactForm.addEventListener('submit', (e) => {
+
+        // Empêche le rechargement de la page
+        e.preventDefault();
+
+        // Récupération des champs
+        const nom = document.getElementById('nom');
+        const prenom = document.getElementById('prenom');
+        const email = document.getElementById('email');
+        const sujet = document.getElementById('sujet');
+        const message = document.getElementById('message');
+        const successMessage = document.getElementById('success-message');
+
+        // Regex email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Variable validation
+        let isValid = true;
+
+        // Réinitialisation des erreurs
+        const formControls = document.querySelectorAll('.form-control, .form-select');
+
+        formControls.forEach(field => {
+            field.classList.remove('is-invalid');
+        });
+
+        // Cache message succès
+        successMessage.classList.add('d-none');
+
+        // VALIDATION NOM
+        if (nom.value.trim() === '') {
+            nom.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // VALIDATION PRENOM
+        if (prenom.value.trim() === '') {
+            prenom.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // VALIDATION EMAIL
+        if (email.value.trim() === '') {
+            email.classList.add('is-invalid');
+            isValid = false;
+        } else if (!emailRegex.test(email.value)) {
+            email.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // VALIDATION SUJET
+        if (sujet.value === '') {
+            sujet.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // VALIDATION MESSAGE
+        if (message.value.trim() === '') {
+            message.classList.add('is-invalid');
+            isValid = false;
+        } else if (message.value.trim().length < 20) {
+            message.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // SI TOUT EST OK
+        if (isValid) {
+            successMessage.classList.remove('d-none');
+            contactForm.reset();
+        }
+    });
+}

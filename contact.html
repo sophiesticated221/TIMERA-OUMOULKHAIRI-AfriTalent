@@ -68,24 +68,22 @@
                     <div class="col-lg-7">
                         <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border">
                             <h3 class="mb-4 fw-bold">Envoyez nous un message</h3>
-                            <div id="success-message" class="alert alert-success d-none" role="alert">
-                                <i class="bi bi-check-circle-fill me-2"></i> Votre message a été envoyé avec succès !
-                                Nous vous répondrons dans les plus brefs délais.
-                            </div>
-                            <form id="contact-form" novalidate>
+                            <form id="contactForm" novalidate>
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="nom" class="form-label fw-medium">Nom</label>
                                         <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                                        <div class="invalid-feedback">Veuillez entrez votre nom</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="prenom" class="form-label fw-medium">Prénom</label>
                                         <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
+                                        <div class="invalid-feedback">Veuillez entrez votre prénom</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label fw-medium">Adresse Email</label>
                                         <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
-                                        <div>Veuillez entrez une adresse email valide</div>
+                                        <div class="invalid-feedback">Veuillez entrez une adresse email valide</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="sujet" class="form-label fw-medium">Sujet</label>
@@ -99,14 +97,18 @@
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label fw-medium">Message</label>
-                                        <textarea class="form-control" name="message"
+                                        <textarea class="form-control" id="message" name="message"
                                             placeholder="Comment pouvons nous vous aider ?" required maxlength="2000"
                                             rows="5"></textarea>
+                                        <div class="invalid-feedback">Le message doit contenir au moins 20 caracteres</div>
                                     </div>        
-                                    <div>Le message doit contenir au moins 20 caracteres</div>
+                                    
                                     <div class="col-12 mt-4">
                                         <button type="submit" class="btn-custom btn-primary-custom w-100">Envoyer le message<i class="bi bi-send ms-2"></i></button>
                                     </div>
+                                </div>
+                                <div id="success-message" class="alert alert-success d-none" role="alert">
+                                    <i class="bi bi-check-circle-fill me-2"></i> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
                                 </div>
                             </form>
                         </div>
