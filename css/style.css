@@ -1,70 +1,73 @@
 :root {
-    /* Couleurs*/
+    /* Couleurs principales du site*/
     --primary: #002244;
     --secondary: #0f172a;
     --accent: #06b6d4;
     --light: #f8fafc;
     --dark: #020617;
+    /* Couleurs des textes */
     --text-main: #334155; 
     --text-muted: #64748b; 
 
 
-    /*Fonts*/
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    /*Polices*/
+    --font-heading: 'Poppins', sans-serif; /* Police utilisée pour les titres */
+    --font-body: 'Inter', sans-serif; /* Police utilisée pour le texte normal */
     
-    --radius: 16px;
-    --radius-sm: 8px;
-    --transition: all 0.3s ease;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-hover: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+    --radius: 16px; /* Rayon principal des bordures pour arrondir les cartes, boutons, etc. */
+    --radius-sm: 8px; /* Petit rayon de bordure utilisé pour les petits éléments */
+    --transition: all 0.3s ease; /* transition fluide pour les animations, hover et changements visuels */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* petite ombre légère utilisée sur les cartes et boutons pour donner un effet de profondeur discret */
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Ombre moyenne utilisée pour accentuer davantage les éléments importants */
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Grande ombre utilisée pour mettre certains éléments en avant avec plus de relief */
+    --shadow-hover: 0 25px 50px -12px rgba(37, 99, 235, 0.25); /* Ombre appliquée lors du survol pour créer un effet interactif moderne */
 }
 
 /*Reset et style de base*/
+/* Sélectionne tous les éléments de la page ainsi que leurs pseudo-éléments before et after */
 *, *::before, *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclut padding et border dans la taille totale des éléments */
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: var(--font-body);
-    margin-top: 100px;
+    font-family: var(--font-body); /* Définit la police principale du site */
+    margin-top: 100px; /*espace en haute pour eviter que la navbar fixe cache le contenu */
     background-color: var(--light);
     color: var(--dark);
-    line-height: 1.6;
+    line-height: 1.6; /* Espace vertical entre les lignes pour améliorer la lisibilité */
     overflow-x:  hidden;  /*Pour eviter les debordements horizontaux*/
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation fluide lors du changement de couleur ou du mode sombre */
 }
 html { 
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* scroll fluide*/
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading); /* Utilise la police des titres définie dans les variables */
     color: var(--dark);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    font-weight: 700; /* Rend les titres plus épais */
+    line-height: 1.2; /* Réduit légèrement l’espace entre les lignes des titres */
+    margin-bottom: 1rem; /* Ajoute un espace sous chaque titre */
 }
 a {
     color: var(--primary);
-    text-decoration: none;
-    transition: var(--transition);
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: var(--transition); /* Ajoute une transition fluide lors des interactions */
 }
 a:hover {
-    color: var(--accent);
+    color: var(--accent); /* Change la couleur du lien au survol */
 }
 /*Navbar*/
 .navbar {
   background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px); /* Effet de flou derrière la navbar */
   transition: var(--transition);
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05); /*border en bas*/
 }
 .navbar.scrolled {
-  padding: 0.4rem 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  padding: 0.4rem 0; /* Réduit la taille verticale de la navbar */
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1); /* Ajoute une ombre pour donner du relief */
 }
 .navbar-brand {
   font-family: var(--font-heading);
@@ -75,7 +78,7 @@ a:hover {
 .navbar-brand img {
   background-color: var(--secondary);
   padding: 8px 12px;
-  border-radius: 12px;
+   border-radius: 12px; /*bordure arrondi */
 }
 .navbar .nav-link {
   font-weight: 500;
@@ -95,12 +98,12 @@ background: transparent;
 border: none;
 color: var(--dark);
 font-size: 1.2rem;
-cursor: pointer;
+cursor: pointer; /* Curseur en main lors du survol*/
 transition: var(--transition);
 margin-left: 1rem;
 margin-right: 1rem;
 }
-#theme-toggle:hover {
+#theme-toggle:hover { /* Effet hover du bouton */
 color: var(--primary);
 }
 /*footer*/
@@ -116,7 +119,7 @@ margin-bottom: 1.5rem;
 font-size: 1.25rem;
 }
 .footer-links {
-list-style: none;
+list-style: none; /* Supprime le style (les puces) */
 padding: 0;
 }
 .footer-links li {
@@ -128,7 +131,7 @@ transition: var(--transition);
 }
 .footer-links a:hover {
 color: var(--accent);
-padding-left: 5px;
+padding-left: 5px; /* Décale légèrement le lien */
 }
 .footer-bottom {
 border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -140,14 +143,14 @@ font-size: 0.875rem;
 }
 /*HERO*/
 .hero {
-min-height: 100vh;
-display: flex;
-align-items: center;
+min-height: 100vh; /* Hauteur minimale = écran */
+display: flex; /* Utilise Flexbox */
+align-items: center; /* Centre verticalement */
 position: relative;
-overflow: hidden;
+overflow: hidden; /* Cache les débordements */
 padding-top: 80px;
 background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.1), transparent 50%),
-radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.1), transparent 50%);
+radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.1), transparent 50%); /* Dégradés décoratifs */
 }
 .hero h1 {
 font-size: clamp(2.5rem, 5vw, 4rem);
@@ -158,11 +161,11 @@ margin-bottom: 1.5rem;
 .hero h1 span {
 color: var(--primary);
 position: relative;
-display: inline-block;
+display: inline-block; /* INLINE-BLOCK : Propriété qui permet à un élément de se comporter comme du texte (s'aligner horizontalement avec ses voisins) tout en acceptant des dimensions (largeur, hauteur) et des marges */
 }
 .hero h1 span::after {
 content: '';
-position: absolute;
+position: absolute; /*ABSOLUTE : L'élément est sorti du flux normal. Il est positionné par rapport au premier parent qui possède une position autre que 'static' (ex: relative). S'il n'en a pas, il se positionne par rapport à la page entière.*/
 width: 100%;
 height: 30%;
 bottom: 0;
@@ -204,8 +207,8 @@ left: 50%;
 transform: translate(-50%, -50%);
 width: 120%;
 height: 120%;
-background: linear-gradient(45deg, var(--primary), var(--accent));
-border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+background: linear-gradient(45deg, var(--primary), var(--accent)); /*degrade de couleur*/
+border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* BORDER-RADIUS (Complexe) : Utilise la syntaxe "slash" pour créer des formes organiques (blobs).- Les valeurs avant le slash définissent les rayons horizontaux.- Les valeurs après le slash définissent les rayons verticaux.Cela permet d'arrondir chaque coin de manière asymétrique pour un effet de forme fluide et naturelle.*/
 animation: blob-animate 10s infinite alternate;
 z-index: -1;
 opacity: 0.2;
@@ -213,8 +216,8 @@ opacity: 0.2;
 /*bento grid*/
 .bento-grid {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
+grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+ grid-template-rows: repeat(2, 1fr); /*2lignes */
 gap: 1.5rem;
 }
 .bento-item {
@@ -493,7 +496,7 @@ margin-bottom: 1.5rem;
 .dark-mode .hero-subtitle,
 .dark-mode .stat-item p,
 .dark-mode .navbar .nav-link {
-    color: #cbd5e1;
+    color: #e7ebf0;
 }
 /* Titres en blanc en mode sombre */
 .dark-mode h1,
@@ -528,7 +531,6 @@ margin-bottom: 1.5rem;
     visibility: visible; /* Réaffiche l’élément */
 }
 /* Fade-in animation */
-
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -565,9 +567,14 @@ margin-bottom: 1.5rem;
     box-shadow: var(--shadow-hover);
     color: white;
 }
-
-
-
-
-
-
+.preload * {
+    transition: none !important;
+}
+/* Style par défaut pour le mode clair */
+.logoafritalent {
+    transition: filter 0.3s ease; /* Pour une transition douce */
+}
+/* Style appliqué uniquement en mode sombre */
+.dark .logoafritalent {
+    filter: invert(1); /* Inverse les couleurs (le noir devient blanc, etc.) */
+}
