@@ -10,25 +10,26 @@ if (localStorage.getItem("theme") === "dark") {
     // Cela active tous les styles CSS du mode sombre
     document.body.classList.add("dark-mode");
 }
+if (themeToggle) {
+    // Écoute le clic sur le bouton dark mode
+    themeToggle.addEventListener("click", () => {
 
-// Écoute le clic sur le bouton dark mode
-themeToggle.addEventListener("click", () => {
+        // Ajoute ou retire automagittiquement la classe dark-mode
+        document.body.classList.toggle("dark-mode");
 
-    // Ajoute ou retire automagittiquement la classe dark-mode
-    document.body.classList.toggle("dark-mode");
-
-    // Vérifie si le body possède actuellement la classe dark-mode
-    if (document.body.classList.contains("dark-mode")) {
+        // Vérifie si le body possède actuellement la classe dark-mode
+        if (document.body.classList.contains("dark-mode")) {
 
         // Sauvegarde le thème dark dans le navigateur
         // Le thème restera actif même après actualisation
         localStorage.setItem("theme", "dark");
 
-    } else {
+        } else {
         // Sinon sauvegarde le thème light
         localStorage.setItem("theme", "light");
-    }
-});
+        }
+    });
+}
 
 // NAVBAR dynamique au scroll
 
@@ -206,7 +207,7 @@ filterButtons.forEach(button => {
             if (filter === 'all' || filter === category) {
 
                 // Affiche l'élément
-                item.style.display = 'block';
+                item.style.display = '';
 
             } else {
 

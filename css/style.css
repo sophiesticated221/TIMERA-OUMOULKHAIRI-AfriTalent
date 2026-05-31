@@ -7,7 +7,7 @@
     --dark: #020617;
     /* Couleurs des textes */
     --text-main: #334155; 
-    --text-muted: #64748b; 
+    --text-muted: #a0a6ae; 
 
 
     /*Polices*/
@@ -32,7 +32,7 @@
 }
 body {
     font-family: var(--font-body); /* Définit la police principale du site */
-    margin-top: 100px; /*espace en haute pour eviter que la navbar fixe cache le contenu */
+    padding-top: 100px;
     background-color: var(--light);
     color: var(--dark);
     line-height: 1.6; /* Espace vertical entre les lignes pour améliorer la lisibilité */
@@ -307,7 +307,7 @@ position: absolute;
 top: 1rem;
 right: 1rem;
 background-color: var(--accent);
-color: #fff;
+color: #ffffff;
 padding: 0.25rem 0.75rem;
 border-radius: 20px;
 font-size: 0.8rem;
@@ -327,7 +327,7 @@ font-weight: 500;
 .filter-btn:hover,
 .filter-btn.active {
 background-color: var(--primary);
-color: #ffffff;
+color: #eeecec;
 border-color: var(--primary);
 box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
@@ -473,6 +473,13 @@ margin-bottom: 1.5rem;
   .hero-stats { gap: 1rem; }
   .stat-item h3 { font-size: 1.5rem; }
 }
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--light); /* Assure-toi qu'il a un fond */
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
   /* Mode Sombre */
 
 /* Active le mode sombre sur toute la page */
@@ -507,6 +514,10 @@ margin-bottom: 1.5rem;
 .dark-mode h6 {
     color: white;
 }
+.dark-mode .text-muted {
+    color: #bcc7d4 !important;
+}
+
   /* Bouton de retour en haut */
 
 #backToTop {
@@ -532,13 +543,12 @@ margin-bottom: 1.5rem;
 }
 /* Fade-in animation */
 .fade-in {
-  opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 /* Boutons personnalisés */
 .btn-custom {
@@ -577,4 +587,16 @@ margin-bottom: 1.5rem;
 /* Style appliqué uniquement en mode sombre */
 .dark .logoafritalent {
     filter: invert(1); /* Inverse les couleurs (le noir devient blanc, etc.) */
+}
+/* Force une séparation propre entre chaque section, même pendant les animations */
+section.section-padding {
+    margin-bottom: 80px; /* Espace garanti entre les sections */
+    display: block;      /* S'assure que chaque section occupe toute la largeur et pousse la suivante */
+    position: relative;
+    z-index: 1;
+}
+
+/* Optionnel : Si tu veux éviter que la FAQ ne soit jamais trop près des cartes */
+.accordion {
+    margin-top: 2rem;
 }
